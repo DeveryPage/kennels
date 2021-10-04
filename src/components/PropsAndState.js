@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { GetCurrentDate } from "../Modules/Date"
+import { QuoteList } from "../Modules/Quote/QuoteList"
 
 export const PropsAndState = ({ yourName }) => {
   let [countClicks, setCountClicks] = useState(0)
@@ -15,6 +16,7 @@ export const PropsAndState = ({ yourName }) => {
     <>
       <h3>Welcome, {yourName} </h3>
       <p><GetCurrentDate /></p>
+      {/* <p><QuoteList/></p> */}
       <p>{countClicks}</p>
       <button onClick={(handleClick)}>Click Me</button>
     </>

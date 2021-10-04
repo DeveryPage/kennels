@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 //import the components we will need
 import { EmployeeCard } from './Employee';
-import { GetAllEmployees} from '../../Modules/EmployeeManager';
+import { GetAllEmployees, deleteEmployee} from '../../Modules/EmployeeManager';
+import { GetAllCustomers } from '../../Modules/CustomerManager';
+
 
 export const EmployeeList = () => {
   // The initial state is an empty array
@@ -21,10 +23,15 @@ export const EmployeeList = () => {
     GetEmployees();
   }, []);
 
+  const handleDeleteEmployee = id => {
+      deleteEmployee(id)
+      .then(() => GetAllCustomers().then(setEmployees));
+  }
+
   // Finally we use .map() to "loop over" the Customers array to show a list of Customer cards
   return (
     <div className="container-cards">
-      {Employees.map(Employee => <EmployeeCard key={Employee.id} Employee={Employee} />)}
+      {Employees.map(Employee => <EmployeeCard key={Employee.id} Employee={Employee} handleDeleteEmployee={handleDeleteEmployee} />)}
     </div>
   );
 };

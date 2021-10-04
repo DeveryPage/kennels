@@ -1,17 +1,61 @@
 {
     "animals": [
-        { "id": 1, "name": "Doodles", "breed": "Poodle"},
-        { "id": 2, "name": "Decker", "breed": "German Shepherd" },
-        { "id": 3, "name": "Esme", "breed": "Pitbull" }
+        { 
+            "id": 1,
+            "locationId": 1,
+            "customerId": 1,
+            "name": "Doodles",
+            "breed": "Poodle"
+        },
+        {
+            "id": 2,
+            "locationId": 1,
+            "customerId": 1,
+            "name": "Decker",
+            "breed": "German Shepherd"
+        },
+        { 
+            "id": 3,
+            "locationId": 1,
+            "customerId": 1,
+            "name": "Esme",
+            "breed": "Pitbull" 
+        }
     ],
     "customers": [
         {
             "id": 1,
-            "name": "Hannah Hall",
+            "name": "Hannah Halol",
+            "address": "7002 Chestnut Ct"
+        },
+        {
+            "id": 2,
+            "name": "Nah Halal",
+            "address": "7002 Chestnut Ct"
+        },
+        {
+            "id": 3,
+            "name": "Haah Halul",
             "address": "7002 Chestnut Ct"
         }
     ],
-    "employees": [],
+    "employees": [
+        {
+            "id": 1,
+            "name": "Hulk Hall",
+            "address": "8422 Johnson Pike"
+        },
+        {
+            "id": 2,
+            "name": "Hull Ha'all",
+            "address": "8422 Johnson Pike"
+        },
+        {
+            "id": 3,
+            "name": "Hulunka Halla",
+            "address": "8422 Johnson Pike"
+        }
+    ],
     "locations": [
         {
             "id": 1,
